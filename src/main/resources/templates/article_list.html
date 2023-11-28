@@ -1,0 +1,17 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>게시글</th>
+            <th>내용</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="article : ${articleList}">
+            <td>
+                <a th:href="@{/article/detail/{id}}" th:text="${article.title}"></a>
+            </td>
+            <td th:text="${article.content}"></td>
+        </tr>
+    </tbody>
+</table>
+<a th:href="@{/article/create}" class="btn btn_primary">등록</a>
